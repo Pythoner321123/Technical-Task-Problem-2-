@@ -8,7 +8,7 @@ src = r"" # Provide the directory of your source folder inside of the quotation 
 dst = r"" # Create a folder and then provide the directory of your destination folder inside the quotation.
 
 
-# These loops bellow are listing every file from the 2 directories then appending them to a list
+# This is the main function, it takes in 2 arguments source and destination then copies files.
 def copy(source, destinatiun):
     for file in os.listdir(source):
         try:
@@ -23,7 +23,7 @@ def copy(source, destinatiun):
                 with open(f"{destinatiun}\\{file}", "wb") as dstf:
                     dstf.write(f.read())
 
-
+# These loops bellow are listing every file from the 2 directories then appending them to a list
 for dstFile in os.listdir(dst):
     dstFiles.append(dstFile)
 for srcFile in os.listdir(src):
